@@ -1,0 +1,135 @@
+type: 'custom:vertical-stack-in-card'
+title: ''
+cards:
+  - type: 'custom:button-card'
+    entity: Entity_name
+    name: Hue
+    icon: 'mdi:television-ambient-light'
+    hold_action:
+      action: more-info
+    layout: icon_name_state
+    style: |
+      ha-card {
+        background: rgba(255, 255, 255, 0.0);
+        box-shadow: 'inset -7px -7px 10px 0px  #fff, inset 7px 7px 20px 0px  #AEAEC0';
+
+      }
+    state:
+      - value: 'on'
+        color: auto
+        styles:
+          card:
+            - height: 80px
+            - font-size: 14px
+          label:
+            - color: 'rgba(0, 0, 0, 0.6)'
+            - font-size: 14px
+            - padding: 5px 0px 0px 0px
+          name:
+            - text-transform: uppercase
+            - letter-spacing: 0.5em
+            - font-familly: cursive
+            - padding: 0px 0px
+            - color: black
+          state:
+            - justify-self: start
+            - font-size: 10px
+            - padding: 0px 0px
+      - operator: default
+        color: 'rgba(100, 100, 100, 0.8)'
+        styles:
+          card:
+            - height: 80px
+            - font-size: 14px
+            - background-color: 'rgba(255, 255, 255, 0.0)'
+          label:
+            - color: 'rgba(0, 0, 0, 0.6);'
+            - font-size: 14px
+            - padding: 5px 0px 0px 0px
+          name:
+            - text-transform: uppercase
+            - letter-spacing: 0.5em
+            - font-familly: cursive
+            - padding: 0px 0px
+          state:
+            - justify-self: start
+            - font-size: 10px
+            - padding: 0px 0px
+          icon:
+            - color: 'rgba(0, 0, 0, 0.6)'
+  - type: horizontal-stack
+    cards:
+      - type: entities
+        debug_cardmod: true
+        entities:
+          - type: 'custom:slider-entity-row'
+            entity: Entity_name
+            full_row: true
+            toggle: false
+            hide_state: true
+        style:
+          .: |
+            ha-card {  
+            background-color: rgba(255, 255, 255, 0.0);  
+             }
+          '#states div':
+            slider-entity-row:
+              $: >
+                ha-slider {  height: 12px; border: 1px solid #fff; box-shadow:
+                inset 2px 2px 5px 2px rgba(0,0,0, 0.2), inset -2px -2px 5px 2px
+                rgba(255,255,255, 0.8); border-radius: 10px;   }
+          slider-entity-row:
+            $:
+              ha-slider:
+                $:
+                  '#sliderKnob': >
+                    .slider-knob {border-radius: 10px} .slider-knob {border: 1px
+                    solid rgba(0, 0,0, 0.2)} .slider-knob {background-color:
+                    rgba(255, 255, 255, 0.0)} .slider-knob {width: 36px}
+                    .slider-knob {height: 36px}      .slider-knob {box-shadow:
+                    -3px -3px 10px 0px
+                     #ffffff, 1px 1px 10px 1px   #AEAEC0;}
+                    .slider-knob-inner {border: 0px} .slider-knob-inner
+                    {background-color: rgba(255, 255, 255, 0.0)}
+                    .slider-knob-inner::after  {background-color: rgba(0, 0,0,
+                    0.0)} .slider-knob-inner::before  {background-color: black}
+                    .slider-knob-inner::before  {background-color: transparent}
+                    .slider-knob-inner::inner  {height: 0px}
+                    .slider-knob-inner::before  {border: 0px)} .slider-knob
+                    {top: -3px} .slider-knob-inner  {background-color: 
+                    tranparent} .slider-knob-inner  {width: 0px}
+                    .slider-knob-inner  {hight: 0px} .slider-knob-inner::after 
+                    {color: '#000000')} .pin > .slider-knob >
+                    .slider-knob-inner::after  {color: black} .pin >
+                    .slider-knob > .slider-knob-inner::after  {top: 20px}
+                  '#sliderContainer': |
+                    .bar-container {overflow: unset}
+                    .bar-container {position: fixed}
+                    .bar-container {height: 20px}
+                    .bar-container {top: -6px}
+                    .bar-container {left: -15px}
+                    .bar-container {right: -20px}
+                  paper-progress:
+                    $: >
+                      #progressContainer {height: 12px} #progressContainer
+                      {background: transparent} #progressContainer {border: 0px
+                      solid #fff} #progressContainer {border-radius: 10px} 
+                      #primaryProgress {background-color: #000} #primaryProgress
+                      {border: 1px solid #000} #primaryProgress {border-radius:
+                      10px} #primaryProgress {height: 8px}  #primaryProgress
+                      {box-shadow: inset 2px 2px 2px 1px rgba(0,0,0,
+                       0.05), inset -2px -2px 7px 1px rgba(255,255,255, 0.9)}
+                      #primaryProgress {top: 2px} 
+style: |
+  ha-card {   --ha-card-box-shadow: 0px;
+  border-radius: 10px;
+  border: 0px solid rgba(100, 100,100, 0.3);    
+  box-shadow: -6px -6px 5px 0px
+  #ffffff, 6px 6px 5px 0px   #AEAEC0;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.7);
+  height: 160px;
+  background: rgba(255, 255, 255, 0.0);
+   }
+view_layout:
+  grid-area: main_1
