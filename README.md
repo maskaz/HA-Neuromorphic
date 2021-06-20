@@ -1,7 +1,7 @@
 # HA-Neuromorphic
 Neuromorphic Home assistant card-mod custom configs
 
-![alt text](https://github.com/maskaz/HA-Neuromorphic/blob/main/Neuromorphic.PNG)
+![alt text](https://github.com/maskaz/HA-Neuromorphic/blob/main/Neuromorphic_look.PNG)
 
 This repo contains configs to customize Home Assiatant cards.
 
