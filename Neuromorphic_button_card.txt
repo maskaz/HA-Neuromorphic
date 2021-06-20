@@ -1,0 +1,56 @@
+type: 'custom:button-card'
+entity: Entity.name
+show_label: true
+name: Name
+icon: 'mdi:television-play'
+layout: icon_name_state
+style: |
+  ha-card {   --ha-card-box-shadow: 0px;
+  border-radius: 10px;
+  border: 0px solid rgba(100, 100,100, 0.3);    
+  box-shadow: -3px -3px 3px 1px
+  #ffffff, 3px 3px 3px 1px   #AEAEC0;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.7);
+  height: 160px;
+  background: rgba(255, 255, 255, 0.0);
+   }
+state:
+  - value: 'off'
+    color: auto
+    styles:
+      card:
+        - height: 80px
+      name:
+        - text-transform: uppercase
+        - letter-spacing: 0.5em
+        - font-familly: cursive
+        - padding: 0px 0px
+        - justify-self: center
+      state:
+        - justify-self: start
+        - font-size: 10px
+        - padding: 0px 0px
+      icon:
+        - color: 'rgba(100, 100, 100, 0.8)'
+  - operator: default
+    color: 'rgba(100, 100, 100, 0.8)'
+    styles:
+      card:
+        - height: 80px
+        - background-color: 'rgba(255, 255, 255, 0.0)'
+        - box-shadow: 'inset -3px -3px 3px 1px  #fff, inset 3px 3px 3px 1px  #AEAEC0'
+        - border: 2px solid var(--primary-color)
+      name:
+        - text-transform: uppercase
+        - letter-spacing: 0.5em
+        - font-familly: cursive
+        - padding: 0px 0px
+        - color: 'rgba(0, 0, 0, 0.6)'
+        - justify-self: center
+      state:
+        - justify-self: start
+        - font-size: 10px
+        - padding: 0px 0px
+      icon:
+        - color: var(--primary-color)

@@ -1,0 +1,43 @@
+type: entities
+entities:
+  - entity: Entity.name
+    style:
+      hui-generic-entity-row:
+        ha-entity-toggle:
+          $:
+            ha-switch:
+              $: |
+                .mdc-switch .mdc-switch__track {
+                  border: 1px solid #fff !important;
+                  border-radius: 3px !important;
+                  box-shadow:
+                  inset 2px 2px 5px 2px rgba(0,0,0, 0.4), inset -2px -2px 5px 2px
+                  rgba(255,255,255, 0.1) !important;
+                }
+                .mdc-switch .mdc-switch__thumb-underlay .mdc-switch__thumb{
+                    width: 22px !important;
+                    height: 22px !important;
+                    border-radius: 5px !important;
+                    box-shadow: -0px -1px 5px 0px
+                    background-color: #f0f0f0;
+
+                    #ffffff, 0px 1px 5px 0px   #AEAEC0 !important;
+                    border: 1px solid rgba(0, 0,0, 0.2) !important;
+                  }
+              .: |
+                ha-switch {
+                --switch-unchecked-track-color: #f0f0f0;
+                --switch-checked-track-color: transparent;
+                --switch-checked-button-color: var(--primary-color);
+                }
+style: |
+  ha-card {   --ha-card-box-shadow: 0px;
+  border-radius: 10px;
+  border: 0px solid rgba(100, 100,100, 0.3);    
+  box-shadow: -3px -3px 3px 1px
+  #ffffff, 3px 3px 3px 1px   #AEAEC0;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0, 0.0);
+  height: 160px;
+   }

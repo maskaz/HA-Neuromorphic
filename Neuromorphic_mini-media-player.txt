@@ -1,0 +1,140 @@
+type: 'custom:vertical-stack-in-card'
+title: ''
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: entities
+        debug_cardmod: true
+        entities:
+          - type: 'custom:mini-media-player'
+            entity: Entity.name
+            group: true
+            hide:
+              controls: false
+              source: false
+              info: false
+              power: false
+              icon: false
+              name: false
+        style:
+          .: |
+            ha-card {  
+            background-color: rgba(0,0,0, 0.0);  
+             }
+          mini-media-player:
+            $:
+              mmp-powerstrip:
+                $:
+                  mmp-media-controls:
+                    $:
+                      ha-slider:
+                        $:
+                          '#sliderKnob': >
+                            .slider-knob {border-radius: 10px} .slider-knob
+                            {border: 1px solid rgba(0, 0,0, 0.2)} .slider-knob
+                            {background-color: #f0f0f0} .slider-knob {width:
+                            36px} .slider-knob {height: 36px}      .slider-knob
+                            {box-shadow: -0px -1px 5px 0px
+                             #ffffff, 0px 1px 5px 0px   #AEAEC0;}
+                            .slider-knob-inner {border: 0px} .slider-knob-inner
+                            {background-color: rgba(255, 255, 255, 0.0)}
+                            .slider-knob-inner::after  {background-color:
+                            rgba(0, 0,0, 0.0)} .slider-knob-inner::before 
+                            {background-color: black}
+                            .slider-knob-inner::before  {background-color:
+                            transparent} .slider-knob-inner::inner  {height:
+                            0px} .slider-knob-inner::before  {border: 0px)}
+                            .slider-knob {top: 2px} .slider-knob-inner 
+                            {background-color:  tranparent} .slider-knob-inner 
+                            {width: 0px} .slider-knob-inner  {hight: 0px}
+                            .slider-knob-inner::after  {color: '#000000')} .pin
+                            > .slider-knob > .slider-knob-inner::after  {color:
+                            black} .pin > .slider-knob >
+                            .slider-knob-inner::after  {top: 20px} .pin.ring >
+                            .slider-knob > .slider-knob-inner::before
+                            {background:
+                             transparent} .pin.ring > .slider-knob > .slider-knob-inner::before
+                             {hight: 40px} .slider-knob.dragging {background: (rgba(0,0,0, 0.3)}
+                             paper-ripple {color: transparent}
+                          paper-progress:
+                            $: >
+                              #progressContainer {height: 12px}
+                              #progressContainer {background: transparent}
+                              #progressContainer {box-shadow: inset 2px 2px 5px
+                              2px rgba(0,0,0, 0.2), inset -2px -2px 5px 2px
+                              rgba(255,255,255, 0.8);}  #progressContainer
+                              {border: 1px solid #fff} #progressContainer
+                              {border-radius: 3px}  #primaryProgress
+                              {background-color: var(--primary-color)}
+                              #primaryProgress {border: 1px solid rgba(0,0,0,
+                              0.1)} #primaryProgress {border-radius: 3px}
+                              #primaryProgress {height: 8px}  #primaryProgress
+                              {box-shadow: inset 2px 2px 2px 1px rgba(0,0,0,
+                              0.05), inset -2px -2px 5px 0px rgba(255,255,255,
+                              0.5)} #primaryProgress {top: 1px} 
+                              #primaryProgress {left: 1px}
+              mmp-media-controls:
+                $:
+                  ha-slider:
+                    $:
+                      '#sliderKnob': >
+                        .slider-knob {border-radius: 10px} .slider-knob {border:
+                        1px solid rgba(0, 0,0, 0.2)} .slider-knob
+                        {background-color: #f0f0f0} .slider-knob {width: 36px}
+                        .slider-knob {height: 36px}      .slider-knob
+                        {box-shadow: -0px -1px 5px 0px
+                         #ffffff, 0px 1px 5px 0px   #AEAEC0;}
+                        .slider-knob-inner {border: 0px} .slider-knob-inner
+                        {background-color: rgba(255, 255, 255, 0.0)}
+                        .slider-knob-inner::after  {background-color: rgba(0,
+                        0,0, 0.0)} .slider-knob-inner::before 
+                        {background-color: black} .slider-knob-inner::before 
+                        {background-color: transparent}
+                        .slider-knob-inner::inner  {height: 0px}
+                        .slider-knob-inner::before  {border: 0px)} .slider-knob
+                        {top: -3px} .slider-knob-inner  {background-color: 
+                        tranparent} .slider-knob-inner  {width: 0px}
+                        .slider-knob-inner  {hight: 0px}
+                        .slider-knob-inner::after  {color: '#000000')} .pin >
+                        .slider-knob > .slider-knob-inner::after  {color: black}
+                        .pin > .slider-knob > .slider-knob-inner::after  {top:
+                        20px} .pin.ring > .slider-knob >
+                        .slider-knob-inner::before {background:
+                         transparent} .pin.ring > .slider-knob > .slider-knob-inner::before
+                         {hight: 40px} .slider-knob.dragging {background: (rgba(0,0,0, 0.3)}
+                         paper-ripple {color: transparent}
+                      paper-progress:
+                        $: >
+                          #progressContainer {height: 12px} #progressContainer
+                          {background: transparent} #progressContainer
+                          {box-shadow: inset 2px 2px 5px 2px rgba(0,0,0, 0.2),
+                          inset -2px -2px 5px 2px rgba(255,255,255, 0.8);} 
+                          #progressContainer {border: 1px solid #fff}
+                          #progressContainer {border-radius: 3px} 
+                          #primaryProgress {background-color:
+                          var(--primary-color)} #primaryProgress {border: 1px
+                          solid rgba(0,0,0, 0.1)} #primaryProgress
+                          {border-radius: 3px} #primaryProgress {height: 8px} 
+                          #primaryProgress {box-shadow: inset 2px 2px 2px 1px
+                          rgba(0,0,0,
+                           0.05), inset -2px -2px 5px 0px rgba(255,255,255, 0.5)}
+                          #primaryProgress {top: 1px}  #primaryProgress {left:
+                          1px}
+                      '#sliderContainer': |
+                        .bar-container {overflow: unset}
+                        .bar-container {position: fixed}
+                        .bar-container {height: 20px}
+                        .bar-container {top: -6px}
+                        .bar-container {left: -15px}
+                        .bar-container {right: -20px}
+style: |
+  ha-card {   --ha-card-box-shadow: 0px;
+  border-radius: 10px;
+  border: 0px solid rgba(100, 100,100, 0.3);    
+  box-shadow: -3px -3px 3px 1px
+  #ffffff, 3px 3px 3px 1px   #AEAEC0;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0, 0.0);
+  height: 140px;
+   }
